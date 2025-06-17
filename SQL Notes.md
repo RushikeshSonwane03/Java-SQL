@@ -10,17 +10,17 @@ https://npublic.msrtcors.com/view/secure/reservation.xhtml
 - XAMPP :-  Default Ports: Apache (80,443) , MySQL(3306)
 
 - DataType :- 
-    Strings - Char(0 - 255), Varchar(0 - 65535), Text(0 - 65535), Enum(65535), Blob(65535)
-    Numeric - Int (255), Integer, Float, Double, Bool
-    Date & Time - Date, DateTime, TimeStamp, Time, Year - [Format: Date= YYYY-MM-DD, Time= HH:MM:SS, DateTime= YYYY-MM-DD hh:mm:ss,
-    TimeStamp:TimeZone- UTC+05:30]
+	- Strings - Char(0 - 255), Varchar(0 - 65535), Text(0 - 65535), Enum(65535), Blob(65535)
+	- Numeric - Int (255), Integer, Float, Double, Bool
+	- Date & Time - Date, DateTime, TimeStamp, Time, Year - [Format: Date= YYYY-MM-DD, Time= HH:MM:SS, DateTime= YYYY-MM-DD hh:mm:ss,
+	- TimeStamp:TimeZone- UTC+05:30]
 
 - SQL Commands :- 
-    DDL - Data Definiton Language (CREATE, DROP, ALTER, TRUNCATE, RENAME)
-    DML - Data Manipulation Language (INSERT, UPDATE, DELETE, CALL, LOCK)
-    TCL - Transaction Control Language (COMMIT, SAVEPOINT,ROLLBACK, SET TRANSACTION, SET CONSTRAINT)
-    DQL - Data Query Language (SELECT)
-    DCL - Data Control Language (GRANT, REVOKE) 
+    - DDL - Data Definiton Language (CREATE, DROP, ALTER, TRUNCATE, RENAME)
+    - DML - Data Manipulation Language (INSERT, UPDATE, DELETE, CALL, LOCK)
+    - TCL - Transaction Control Language (COMMIT, SAVEPOINT,ROLLBACK, SET TRANSACTION, SET CONSTRAINT)
+    - DQL - Data Query Language (SELECT)
+    - DCL - Data Control Language (GRANT, REVOKE) 
 
 - CRUD :- Create, Read, Update, Delete
     - Create Database Database_Name;
@@ -32,7 +32,8 @@ https://npublic.msrtcors.com/view/secure/reservation.xhtml
     - Update Table_Name set column_name=value where condition;
     - Delete from Table_Name where condition;
 
-- Activity :- 
+- Activity :-
+```sh
     Create Database Rushi;
     Use Rushi;
     Create TABLE Student(id int(10), name varchar(100));
@@ -42,7 +43,7 @@ https://npublic.msrtcors.com/view/secure/reservation.xhtml
     Delete from Student where id=101;
     DROP TABLE Student;
     DROP DATABASE rushi;
-
+```
 ========================================================================================================================================
 
 ## Day 2 : 11-06-2024
