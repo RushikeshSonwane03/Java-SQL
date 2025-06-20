@@ -1,5 +1,3 @@
-https://npublic.msrtcors.com/view/secure/reservation.xhtml
-
 ## Day 1 : 10-06-2024
 
 1. SQL :- Structured Query Language -[Non Case Sensitive]
