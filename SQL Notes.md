@@ -8,27 +8,27 @@
 - XAMPP :-  Default Ports: Apache (80,443) , MySQL(3306)
 
 - DataType :- 
-	- Strings - Char(0 - 255), Varchar(0 - 65535), Text(0 - 65535), Enum(65535), Blob(65535)
-	- Numeric - Int (255), Integer, Float, Double, Bool
-	- Date & Time - Date, DateTime, TimeStamp, Time, Year - [Format: Date= YYYY-MM-DD, Time= HH:MM:SS, DateTime= YYYY-MM-DD hh:mm:ss,
-	- TimeStamp:TimeZone- UTC+05:30]
+	- Strings : Char(0 - 255), Varchar(0 - 65535), Text(0 - 65535), Enum(65535), Blob(65535)
+	- Numeric : Int (255), Integer, Float, Double, Bool
+	- Date & Time : Date, DateTime, TimeStamp, Time, Year - [Format: Date= YYYY-MM-DD, Time= HH:MM:SS, DateTime= YYYY-MM-DD hh:mm:ss,
+	- TimeStamp:TimeZone : UTC+05:30]
 
 - SQL Commands :- 
-    - DDL - Data Definiton Language (CREATE, DROP, ALTER, TRUNCATE, RENAME)
-    - DML - Data Manipulation Language (INSERT, UPDATE, DELETE, CALL, LOCK)
-    - TCL - Transaction Control Language (COMMIT, SAVEPOINT,ROLLBACK, SET TRANSACTION, SET CONSTRAINT)
-    - DQL - Data Query Language (SELECT)
-    - DCL - Data Control Language (GRANT, REVOKE) 
+	- DDL : Data Definiton Language (CREATE, DROP, ALTER, TRUNCATE, RENAME)
+	- DML : Data Manipulation Language (INSERT, UPDATE, DELETE, CALL, LOCK)
+	- TCL : Transaction Control Language (COMMIT, SAVEPOINT,ROLLBACK, SET TRANSACTION, SET CONSTRAINT)
+	- DQL : Data Query Language (SELECT)
+	- DCL : Data Control Language (GRANT, REVOKE) 
 
 - CRUD :- Create, Read, Update, Delete
-    - Create Database Database_Name;
-    - Create Table Table_Name(Column1_Name datatype, Column2_Name datatype, Column3_Name datatype, ......);
-    - Insert into Table_Name(Column1_Name datatype, Column2_Name datatype, Column3_Name datatype, ......) values(Column1_Value, Column2_Value, Column3_Value, ......);
-    - Insert Multiple rows in single querry: () <- A single Tupple == Row
-        - Insert into Table_Name(Column1_Name datatype),(Column1_Name datatype),(Column1_Name datatype);
-    - Select * from Table_Name;
-    - Update Table_Name set column_name=value where condition;
-    - Delete from Table_Name where condition;
+	- Create Database Database_Name;
+	- Create Table Table_Name(Column1_Name datatype, Column2_Name datatype, Column3_Name datatype, ......);
+	- Insert into Table_Name(Column1_Name datatype, Column2_Name datatype, Column3_Name datatype, ......) values(Column1_Value, Column2_Value, Column3_Value, ......);
+	- Insert Multiple rows in single querry: () <- A single Tupple == Row
+	- Insert into Table_Name(Column1_Name datatype),(Column1_Name datatype),(Column1_Name datatype);
+	- Select * from Table_Name;
+	- Update Table_Name set column_name=value where condition;
+	- Delete from Table_Name where condition;
 
 - Activity :-
 ```sh
@@ -65,7 +65,7 @@
     - Truncate Table table_name;
 
 - Copy Table :-
-    Insert into Destination_Table Select * from Source_Table ;  
+    - Insert into Destination_Table Select * from Source_Table ;  
 
     * Example:
         - Insert into Student1(id, name) values(1,"abcd"),(2,"pqrs"),(3,"mnop");
@@ -77,115 +77,120 @@
 ## Day 3 : 12-06-2024
 
 - Alter Table :- Rename Column, Add Column, Modify Column, Drop Column.
-    - RENAME Table:- ALTER TABLE present_table_name RENAME TO new_table_name;
-        eg:- ALTER TABLE colleges RENAME TO student; 
-    - Add Column:- ALTER TABLE table_name ADD column_name column_definition;
-        eg:- ALTER TABLE student ADD Address varchar(20);
-    - MODIFY Column:- ALTER TABLE table_name MODIFY column_name new_column_definition;
-        eg:- ALTER TABLE student MODIFY Address varchar(500);
-    - DROP Column:- ALTER TABLE table_name DROP COLUMN column_name;
-        eg:- ALTER TABLE student DROP COLUMN Address;
-    - ALTER RENAME Column :- ALTER TABLE table_name CHANGE Old_Column_Name New_Column_Name New_Column_Definiton;
-        eg:- ALTER TABLE student CHANGE college_id college_roll_no int(10);
+	- RENAME Table:- ALTER TABLE present_table_name RENAME TO new_table_name;
+		- eg:- ALTER TABLE colleges RENAME TO student; 
+	- Add Column:- ALTER TABLE table_name ADD column_name column_definition;
+		- eg:- ALTER TABLE student ADD Address varchar(20);
+	- MODIFY Column:- ALTER TABLE table_name MODIFY column_name new_column_definition;
+		- eg:- ALTER TABLE student MODIFY Address varchar(500);
+	- DROP Column:- ALTER TABLE table_name DROP COLUMN column_name;
+		- eg:- ALTER TABLE student DROP COLUMN Address;
+	- ALTER RENAME Column :- ALTER TABLE table_name CHANGE Old_Column_Name New_Column_Name New_Column_Definiton;
+		- eg:- ALTER TABLE student CHANGE college_id college_roll_no int(10);
 
 - SELECT CLAUSE:-
-    - WHERE
-    - GROUP BY + HAVING 
-    - ORDER BY
+	- WHERE
+	- GROUP BY + HAVING 
+	- ORDER BY
 
-    - SELECT * FROM table_name; -(Select all)
-    - SELECT Column_Name from table_name; -(Select particular column)
-    - SELECT Column1_Name,Column2_Name,Column3_Name from table_name; -(Select few columns)
+	- SELECT * FROM table_name; -(Select all)
+	- SELECT Column_Name from table_name; -(Select particular column)
+	- SELECT Column1_Name,Column2_Name,Column3_Name from table_name; -(Select few columns)
 
 
-    - KEYWORDS :-
-        DISTINCT - SELECT DISTINCT column_name FROM table_name; (Select Unique values)
+ - KEYWORDS :-
+	- DISTINCT - SELECT DISTINCT column_name FROM table_name; (Select Unique values)
 
-    - COUNT() :- 
-        SELECT COUNT(column_name) FROM table_name;
-        eg. 
-            SELECT COUNT(name) from college;
-            SELECT COUNT(DISTINCT name) from college;
-            SELECT COUNT(*) from college;
+	- COUNT() :- 
+	        - SELECT COUNT(column_name) FROM table_name;
+	        - eg.
+		        - SELECT COUNT(name) from college;
+		        - SELECT COUNT(DISTINCT name) from college;
+		        - SELECT COUNT(*) from college;
 
-    - LIMIT :-
-        - SELECT * FROM table_name LIMIT number;
+	- LIMIT :-
+        	- SELECT * FROM table_name LIMIT number;
         
-    - ORDER BY :-    
-        - SELECT * FROM table_name ORDER BY column_name ASC;
-        - SELECT * FROM table_name ORDER BY column_name DESC;
+	- ORDER BY :-    
+	        - SELECT * FROM table_name ORDER BY column_name ASC;
+	        - SELECT * FROM table_name ORDER BY column_name DESC;
 
-    - ORDER BY + LIMIT :-    
-        - SELECT * FROM table_name ORDER BY column_name ASC LIMIT number;
-        - SELECT * FROM table_name ORDER BY column_name DESC LIMIT number;
+    	- ORDER BY + LIMIT :-    
+	        - SELECT * FROM table_name ORDER BY column_name ASC LIMIT number;
+	        - SELECT * FROM table_name ORDER BY column_name DESC LIMIT number;
 
-    - AS :-
-        - SELECT original_column_name AS preview_column_name FROM table_name;
+    	- AS :-
+       		- SELECT original_column_name AS preview_column_name FROM table_name;
     
-    - SUM() :-
-        - SELECT SUM(column_name) AS "expression_name" FROM table_name;
-            eg :- CREATE TABLE employee(eid int(10), salary int(255));
-                Insert into employee(eid, salary) values(101, 10000), (102, 20000), (103, 30000), (104, 40000);
-                SELECT SUM(SALARY) AS 'Total Salary' from employee;
-    
+    	- SUM() :-
+	        - SELECT SUM(column_name) AS "expression_name" FROM table_name;
+	        - eg :-
+	        	- CREATE TABLE employee(eid int(10), salary int(255));
+	                - Insert into employee(eid, salary) values(101, 10000), (102, 20000), (103, 30000), (104, 40000);
+	        	- SELECT SUM(SALARY) AS 'Total Salary' from employee;
+	    
 
 ========================================================================================================================================
 
 ## Day 4 : 13-06-2024
 
-    - IN :-
-        - SELECT * FROM table_name WHERE column_name IN (val1, val2, val3,.....); --< Searching Operation : WILL DISPLAY WHICHEVER VALUES ARE FOUND, NOT NECESSARY ALL VALUES TO BE FOUND FOR OUTPUT >
-            eg :- SELECT * FROM college WHERE name IN ('abcd','efgh','ijkl'); 
-    - OR :-
-        - SELECT * FROM table_name WHERE column_name = value1 OR column_name = value1;
-    - IS NULL - IS NOT NULL :-
-        - SELECT * FROM table_name WHERE column_name IS NULL/NOT NULL;
-            eg :- SELECT * FROM college WHERE id IS NULL; 
-                SELECT * FROM college WHERE id IS NOT NULL; 
-    - AND :- 
-        - SELECT * FROM table_name WHERE condition1 AND condition2;
+- KEYWORDS :-
+	- IN :-
+        	- SELECT * FROM table_name WHERE column_name IN (val1, val2, val3,.....); --< Searching Operation : WILL DISPLAY WHICHEVER VALUES ARE FOUND, NOT NECESSARY ALL VALUES TO BE FOUND FOR OUTPUT >
+            	- eg :- SELECT * FROM college WHERE name IN ('abcd','efgh','ijkl'); 
+    	- OR :-
+        	- SELECT * FROM table_name WHERE column_name = value1 OR column_name = value1;
+   	- IS NULL - IS NOT NULL :-
+        	- SELECT * FROM table_name WHERE column_name IS NULL/NOT NULL;
+            	- eg :-
+   	  		- SELECT * FROM college WHERE id IS NULL; 
+                	- SELECT * FROM college WHERE id IS NOT NULL; 
+    	- AND :- 
+        	- SELECT * FROM table_name WHERE condition1 AND condition2;
     
-    - ORDER BY Clause :- (ASCENDING, DESCENDING, RANDOM)
-        - SELECT * FROM table_name ORDER BY column_name ASC;
-        - SELECT * FROM table_name ORDER BY column_name DESC;
-        - SELECT * FROM table_name ORDER BY column_name RAND();
-        - SELECT * FROM table_name ORDER BY column_name RAND() LIMIT Number;
+    	- ORDER BY Clause :- (ASCENDING, DESCENDING, RANDOM)
+	        - SELECT * FROM table_name ORDER BY column_name ASC;
+	        - SELECT * FROM table_name ORDER BY column_name DESC;
+	        - SELECT * FROM table_name ORDER BY column_name RAND();
+	        - SELECT * FROM table_name ORDER BY column_name RAND() LIMIT Number;
 
-- UPDATE :- 
-    - UPDATE table_name SET column_name = value WHERE Condition;
+	- UPDATE :- 
+    		- UPDATE table_name SET column_name = value WHERE Condition;
 
 ========================================================================================================================================
 
 ## Day 5 : 14-06-2024
 
-- JOINS :- To Find Records Stored in Multiple Tables.  
-    - INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN
-    ( A = LEFT TABLE, B = RIGHT TABLE)
-        - INNER JOIN :- A ∩ B 
-        - LEFT JOIN :- A - B
-        - Right JOIN :- B - A
-        - FULL OUTER JOIN :- A U B
+- JOINS :-
+	- To Find Records Stored in Multiple Tables.  
+   	- INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN
+    	- ( A = LEFT TABLE, B = RIGHT TABLE)
+	        - INNER JOIN :- A ∩ B 
+	        - LEFT JOIN :- A - B
+	        - Right JOIN :- B - A
+	        - FULL OUTER JOIN :- A U B
 
-    1. INNER JOIN :- SELECT * FROM table1_name INNER JOIN table2_name ON Condition ; 
-                    SELECT * FROM table1_name JOIN table2_name ON Condition ; (ALTERNAME WAY) 
-        eg.  
-            SELECT * FROM first INNER JOIN second ON first.ID = second.ID ;
-            SELECT first.ID,first.name,first.Address,second.Contact, second.Pincode FROM first INNER JOIN second ON first.ID = second.ID ;
+    	1. INNER JOIN :-
+  		- SELECT * FROM table1_name INNER JOIN table2_name ON Condition ;
+   		- SELECT * FROM table1_name JOIN table2_name ON Condition ; (ALTERNAME WAY) 
+        	- eg.  
+            		- SELECT * FROM first INNER JOIN second ON first.ID = second.ID ;
+            		- SELECT first.ID,first.name,first.Address,second.Contact, second.Pincode FROM first INNER JOIN second ON first.ID = second.ID ;
 
-    2. LEFT JOIN :- SELECT * FROM table1_name LEFT JOIN table2_name ON Condition ;
-        eg.  
-            SELECT * FROM first LEFT JOIN second ON first.ID = second.ID ;
-            SELECT first.ID,first.name,first.Address,second.Contact, second.Pincode FROM first LEFT JOIN second ON first.ID = second.ID ;
+    2. LEFT JOIN :-
+       		- SELECT * FROM table1_name LEFT JOIN table2_name ON Condition ;
+        	- eg.
+	       		- SELECT * FROM first LEFT JOIN second ON first.ID = second.ID ;
+	            	- SELECT first.ID,first.name,first.Address,second.Contact, second.Pincode FROM first LEFT JOIN second ON first.ID = second.ID ;
 
-    3. RIGHT JOIN :- SELECT * FROM table1_name RIGHT JOIN table2_name ON Condition ;
-        eg.
-            SELECT * FROM first RIGHT JOIN second ON first.ID = second.ID ;
-            SELECT first.ID,first.name,first.Address,second.Contact, second.Pincode FROM first RIGHT JOIN second ON first.ID = second.ID ;
+    4. RIGHT JOIN :-
+       		- SELECT * FROM table1_name RIGHT JOIN table2_name ON Condition ;
+        	- eg.
+            		- SELECT * FROM first RIGHT JOIN second ON first.ID = second.ID ;
+            		- SELECT first.ID,first.name,first.Address,second.Contact, second.Pincode FROM first RIGHT JOIN second ON first.ID = second.ID ;
 
-    4. FULL OUTER JOIN :- (LEFT JOIN + RIGHT JOIN = A U B) 
-            - SELECT * FROM table1_name LEFT JOIN table2_name ON Condition 
-              UNION
-              SELECT * FROM table1_name RIGHT JOIN table2_name ON Condition ;  
+    6. FULL OUTER JOIN :- (LEFT JOIN + RIGHT JOIN = A U B) 
+            	- <p>(SELECT * FROM table1_name LEFT JOIN table2_name ON Condition) </p> <p>UNION</p> <p>(SELECT * FROM table1_name RIGHT JOIN table2_name ON Condition) ;</p>  
         eg.  
             SELECT * FROM first LEFT JOIN second ON first.ID = second.ID
                 UNION                
@@ -194,7 +199,7 @@
                 UNION
                 SELECT first.ID,first.name,first.Address,second.Contact, second.Pincode FROM first RIGHT JOIN second ON first.ID = second.ID ;
 
-    5. CROSS JOIN :- Returns ALL Records from BOTH the tables. 
+    8. CROSS JOIN :- Returns ALL Records from BOTH the tables. 
         - SELECT * FROM table1_name CROSS JOIN table2_name;
 
 
